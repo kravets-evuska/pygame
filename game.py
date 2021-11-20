@@ -10,7 +10,7 @@ win_config = {
 pygame.init()
 win = pygame.display.set_mode((win_config["wight"], win_config["height"]))
 
-pygame.display.set_caption("Eva game")
+pygame.display.set_caption("Eva's game")
 
 
 walk_left = []
