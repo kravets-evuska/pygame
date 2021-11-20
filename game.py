@@ -13,26 +13,17 @@ win = pygame.display.set_mode((win_config["wight"], win_config["height"]))
 pygame.display.set_caption("Eva game")
 
 
-walk_right = [
-    pygame.image.load('sprites/right_1.png'),
-    pygame.image.load('sprites/right_2.png'),
-    pygame.image.load('sprites/right_3.png'),
-    pygame.image.load('sprites/right_4.png'),
-    pygame.image.load('sprites/right_5.png'),
-    pygame.image.load('sprites/right_6.png'),
-]
+walk_left = []
+walk_right = []
 
-walk_left = [
-    pygame.image.load('sprites/left_1.png'),
-    pygame.image.load('sprites/left_2.png'),
-    pygame.image.load('sprites/left_3.png'),
-    pygame.image.load('sprites/left_4.png'),
-    pygame.image.load('sprites/left_5.png'),
-    pygame.image.load('sprites/left_6.png'),
-]
+for i in range(1, 7):
+    left_path = 'sprites/left_' + str(i) + '.png'
+    right_path = 'sprites/right_' + str(i) + '.png'
+    
+    walk_left.append(pygame.image.load(left_path))  
+    walk_right.append(pygame.image.load(right_path))
 
 background = pygame.image.load('sprites/background.jpg')
-
 player_stand = pygame.image.load('sprites/idle.png')
 
 clock = pygame.time.Clock()
@@ -44,10 +35,8 @@ player_height = 71
 player_speed = 5
 player_color = (255, 195, 249)
 
-
 is_jump = False
 jump_count = 10
-
 
 move_left = False
 move_right = False
