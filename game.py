@@ -10,7 +10,7 @@ win_config = {
 pygame.init()
 win = pygame.display.set_mode((win_config["wight"], win_config["height"]))
 
-pygame.display.set_caption("Genshin Impact")
+pygame.display.set_caption("Eva game")
 
 
 walk_right = [
@@ -38,7 +38,7 @@ player_stand = pygame.image.load('sprites/idle.png')
 clock = pygame.time.Clock()
 
 player_x = 50
-player_y = 419
+player_y = 425
 player_widht = 60
 player_height = 71
 player_speed = 5
@@ -55,7 +55,7 @@ animation_count = 0
 
 def draw_window():
     global animation_count
-    win.blit(background, (0, 0))
+    win.blit(background, (0, 0)) 
 
     if animation_count + 1 >= 30:
         animation_count = 0
